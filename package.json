@@ -1,0 +1,28 @@
+{
+  "name": "credit-card-form",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "live-server --port=4001 --host=0.0.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://gitlab.com/experiments-5030/credit-card-form.git"
+  },
+  "author": "Lucas Silva",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://gitlab.com/experiments-5030/credit-card-form/issues"
+  },
+  "homepage": "https://gitlab.com/experiments-5030/credit-card-form#README",
+  "dependencies": {
+    "bootstrap": "^4.2.1",
+    "jquery": "^3.3.1",
+    "popper.js": "^1.14.7"
+  },
+  "devDependencies": {
+    "live-server": "^1.2.1"
+  }
+}
