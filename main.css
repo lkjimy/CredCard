@@ -1,0 +1,101 @@
+body {
+  background: rgba(44, 168, 194, 0.2);
+}
+
+.Ccard {
+  height: 378px;
+  width: 597.24px;
+  position: relative;
+  font-family: 'Share Tech Mono', monospace;
+}
+
+.Ccard.cardVisa {
+  color: #fdfdfd;
+}
+
+.Ccard.cardVisa .card-face {
+  background: linear-gradient(45deg, #1A57A2, #2b7bdd);
+}
+
+.Ccard.cardVisa .card-back {
+  background: linear-gradient(45deg, #1A57A2, #2b7bdd);
+}
+
+.Ccard .card-face {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 378px;
+  width: 597.24px;
+  border-radius: 21px;
+  -webkit-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+          box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+}
+
+.Ccard .card-face.turnAround {
+  -webkit-animation-name: turnAround;
+          animation-name: turnAround;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-timing-function: ease;
+          animation-timing-function: ease;
+  -webkit-animation-delay: 0;
+          animation-delay: 0;
+  -webkit-animation-direction: normal;
+          animation-direction: normal;
+}
+
+.Ccard .card-back {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 378px;
+  width: 597.24px;
+  border-radius: 21px;
+  -webkit-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+          box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+}
+
+.Ccard .card-back.turnAround {
+  -webkit-animation-name: turnAround;
+          animation-name: turnAround;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-timing-function: ease;
+          animation-timing-function: ease;
+  -webkit-animation-delay: 0;
+          animation-delay: 0;
+  animation-direction: reverse;
+}
+
+@-webkit-keyframes turnAround {
+  0% {
+    -webkit-transform: perspective(2000px) rotate3d(0, 1, 0, 0deg);
+            transform: perspective(2000px) rotate3d(0, 1, 0, 0deg);
+    -webkit-box-shadow: 0 5px 30px rgba(0, 0, 0, 0.15);
+            box-shadow: 0 5px 30px rgba(0, 0, 0, 0.15);
+  }
+  100% {
+    -webkit-transform: perspective(2000px) rotate3d(0, 1, 0, 90deg);
+            transform: perspective(2000px) rotate3d(0, 1, 0, 90deg);
+    -webkit-box-shadow: 0 5px 30px rgba(0, 0, 0, 0.15);
+            box-shadow: 0 5px 30px rgba(0, 0, 0, 0.15);
+  }
+}
+
+@keyframes turnAround {
+  0% {
+    -webkit-transform: perspective(2000px) rotate3d(0, 1, 0, 0deg);
+            transform: perspective(2000px) rotate3d(0, 1, 0, 0deg);
+    -webkit-box-shadow: 0 5px 30px rgba(0, 0, 0, 0.15);
+            box-shadow: 0 5px 30px rgba(0, 0, 0, 0.15);
+  }
+  100% {
+    -webkit-transform: perspective(2000px) rotate3d(0, 1, 0, 90deg);
+            transform: perspective(2000px) rotate3d(0, 1, 0, 90deg);
+    -webkit-box-shadow: 0 5px 30px rgba(0, 0, 0, 0.15);
+            box-shadow: 0 5px 30px rgba(0, 0, 0, 0.15);
+  }
+}
+/*# sourceMappingURL=main.css.map */
