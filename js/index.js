@@ -23,7 +23,7 @@ for (var i = 1 ; i <= 12 ; i++ ) {
   var elOption = document.createElement('option');
   elOption.value = `${i}`
   elOption.text = `${i}`
-  
+
   if (i === currentMonth + 1) {
     elOption.defaultSelected = true
   }
@@ -36,7 +36,17 @@ function updateContent (source, target) {
   el.innerHTML = source.value
 }
 
-function addAnimationClass (target) {
-  let el = document.getElementsByClassName(target)
-  el.classList.add('turnAround')
+function upadateExpiration(source, target) {
+  if (target === 'eMonth') {
+    let pre = document.getElementById('eMonth')
+    pre.innerHTML = source.value
+  } else if (target === 'eYear') {
+    let ape = document.getElementById('eYear')
+    ape.innerHTML = source.value
+  }
+}
+
+function addAnimationClass (target, classToAdd) {
+  let [ el ] = document.getElementsByClassName(target)
+  el.classList.toggle(classToAdd)
 }

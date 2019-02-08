@@ -21,39 +21,42 @@
           <div class="card-face">
             <div class="container">
 
-              <div class="form-row justify-content-between mt-4 mb-5">
+              <div class="form-row justify-content-end mt-2 mb-4">
                 <div class="col-auto">
-                  chip
-                </div>
-                <div class="col-auto">
-                  <img src="/images/visa.png" alt="visa logo">
+                  <img class="logo" src="/images/visa.png" alt="visa logo">
                 </div>
               </div>
 
-              <div class="form-row">
+              <div class="form-row mb-3">
                 <div class="col-12">
-                  <span>Card Number:</span>
-                  <p id="cardNumber"></p>
+                  <p id="cardNumber">0000 0000 0000 0000</p>
                 </div>
               </div>
 
               <div class="form-row">
                 <div class="col">
-                  <span>Name:</span>
-                  <p id="ownerName"></p>
+                  <span class="d-block">Nome:</span>
+                  <p id="ownerName">John W. Doe</p>
                 </div>
 
                 <div class="col-auto">
-                    <span>Due date:</span>
-                    <p id="dueDate"><span></span>/<span></span></p>
-                  </div>
+                  <span class="d-block">Validade:</span>
+                  <p id="expirationDate">
+                    <span id="eMonth">XX</span>/<span id="eYear">XXXX</span>
+                  </p>
+                </div>
               </div>
 
             </div>
           </div>
 
           <div class="card-back">
-
+            <div class="magneticStrip mb-3 mt-3"></div>
+            <div class="container">
+              <div class="form-row">
+                <div id="csv" class="col-12 text-right">***</div>
+              </div>
+            </div>
           </div>
         </div>
 
@@ -66,23 +69,45 @@
     <form class="form-row">
 
       <div class="form-group col-12">
-        <input class="cardNumber1 form-control" type="text" placeholder="0000 0000 0000 0000" onkeyup="updateContent(this, 'cardNumber')">
+        <input
+          class="cardNumber1 form-control"
+          type="text"
+          placeholder="0000 0000 0000 0000"
+          onkeyup="updateContent(this, 'cardNumber')">
       </div>
 
       <div class="form-group col-12">
-        <input class="form-control" type="text" placeholder="John Doe" onkeyup="updateContent(this, 'ownerName')">
+        <input
+          class="form-control"
+          type="text"
+          placeholder="John Doe"
+          onkeyup="updateContent(this, 'ownerName')">
       </div>
 
       <div class="form-group col-3">
-        <select class="form-control" id="monthSelect"></select>
+        <select
+          class="form-control"
+          id="monthSelect"
+          onchange="updateContent(this, 'eMonth')">
+        </select>
       </div>
 
       <div class="form-group col-3">
-        <select class="form-control" id="yearSelect"></select>
+        <select
+          class="form-control"
+          id="yearSelect"
+          onchange="updateContent(this, 'eYear')">
+        </select>
       </div>
 
       <div class="form-group col-3 offset-3">
-        <input class="form-control" type="text" placeholder="CSV" onfocus="addAnimationClass('card-face')">
+        <input
+          class="form-control"
+          type="text"
+          placeholder="CSV"
+          onkeyup="updateContent(this, 'csv')"
+          onfocus="addAnimationClass('card-face', 'turnAround'); addAnimationClass('card-back', 'turnAroundInverted')"
+          onfocusout="addAnimationClass('card-face', 'turnAround'); addAnimationClass('card-back', 'turnAroundInverted')">
       </div>
 
     </form>
